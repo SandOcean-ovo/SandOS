@@ -3,16 +3,14 @@ name: Generate Doxygen Documentation
 on:
   push:
     branches:
-      - main  # 或者 master，根据你的主分支名称修改
-    paths:
-      - 'Source/**'     # 监听源码变动
-      - 'docs/Doxyfile' 
+      - main
+  workflow_dispatch:  # 添加手动触发
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 允许推送到 gh-pages 分支
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -22,15 +20,15 @@ jobs:
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:
           doxyfile-path: 'Doxyfile'
-          # 设置工作目录，这样 Doxyfile 中的相对路径 (../Source) 才能正确解析
           working-directory: './docs'
 
+      - name: Add .nojekyll file
+        run: touch ./docs/html/.nojekyll
+
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          # Doxyfile 中配置了 OUTPUT_DIRECTORY = . 和 HTML_OUTPUT = html
-          # 所以生成的 HTML 在 docs/html 目录中
           publish_dir: ./docs/html
-          publish_branch: gh-pages  # 明确指定分支名
-          force_orphan: true  # 首次创建时使用孤立分支
+          publish_branch: gh-pages
+          force_orphan: true

@@ -32,3 +32,5 @@ jobs:
           # Doxyfile 中配置了 OUTPUT_DIRECTORY = . 和 HTML_OUTPUT = html
           # 所以生成的 HTML 在 docs/html 目录中
           publish_dir: ./docs/html
+          publish_branch: gh-pages  # 明确指定分支名
+          force_orphan: true  # 首次创建时使用孤立分支

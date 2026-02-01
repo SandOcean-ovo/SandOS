@@ -298,6 +298,17 @@ OS_Status OS_SemWait(OS_Sem *p_sem);
  */
 OS_Status OS_SemPost(OS_Sem *p_sem);
 
+/**
+ * @brief  在中断中发送信号量 (V操作)
+ * @details 中断安全版本，不会阻塞。
+ * @param  p_sem          指向信号量对象的指针
+ * @param  pxHigherPrioTaskWoken 输出参数，如果唤醒了更高优先级任务则置为 TRUE
+ * @return OS_Status
+ * @retval OS_OK         成功
+ * @retval OS_ERR_PARAM  参数无效
+ */
+OS_Status OS_SemPostFromISR(OS_Sem *p_sem, uint8_t *pxHigherPrioTaskWoken);
+
 /** @} */ // end of group Semaphore
 
 
@@ -365,6 +376,33 @@ OS_Status OS_QueueSend(OS_Queue *p_queue, void *p_msg);
  * @return OS_Status OS_OK 表示成功
  */
 OS_Status OS_QueueReceive(OS_Queue *p_queue, void *p_msg_buffer);
+
+/**
+ * @brief  在中断中发送消息（入队）
+ * @details 中断安全版本，不会阻塞。
+ * @param  p_queue   队列控制块指针
+ * @param  p_msg     要发送的消息数据的指针
+ * @param  pxHigherPrioTaskWoken 输出参数，如果唤醒了更高优先级任务则置为 TRUE
+ * @return OS_Status
+ * @retval OS_OK         发送成功
+ * @retval OS_ERR_Q_FULL 队列已满
+ * @retval OS_ERR_PARAM  参数无效
+ */
+OS_Status OS_QueueSendFromISR(OS_Queue *p_queue, void *p_msg, uint8_t *pxHigherPrioTaskWoken);
+
+/**
+ * @brief  在中断中接收消息（出队）
+ * @details 中断安全版本，不会阻塞。如果队列为空则立即返回错误。
+ * @param  p_queue      队列控制块指针
+ * @param  p_msg_buffer 用于接收消息的缓冲区指针
+ * @param  pxHigherPrioTaskWoken 输出参数（预留，当前未使用）
+ * @return OS_Status
+ * @retval OS_OK          接收成功
+ * @retval OS_ERR_RESOURCE 队列为空
+ * @retval OS_ERR_PARAM   参数无效
+ */
+OS_Status OS_QueueReceiveFromISR(OS_Queue *p_queue, void *p_msg_buffer, uint8_t *pxHigherPrioTaskWoken);
+
 
 /** @} */ // end of group Queue
 

@@ -48,6 +48,17 @@ void OS_CheckStackOverflow(void)
     }
 }
 
+OS_TCB *FindNextTask(void)
+{
+    OS_ASSERT(g_PrioMap != 0);
+
+    uint8_t TopPrio = OS_GetTopPrio(g_PrioMap);
+
+    OS_TCB *next_task = ReadyList[TopPrio].Head;
+    OS_ASSERT(next_task != NULL);
+    return next_task;
+}
+
 void IdleTask(void *param)
 {
     for (;;)
@@ -112,14 +123,14 @@ OS_TCB *List_PopHead(OS_List *list)
     return head;
 }
 
-static void OS_ReadyListAdd(OS_TCB *tcb)
+void OS_ReadyListAdd(OS_TCB *tcb)
 {
     OS_ASSERT(tcb != NULL);
     g_PrioMap |= (1U << tcb->Priority);
     List_InsertTail(&ReadyList[tcb->Priority], tcb);
 }
 
-static void OS_ReadyListRemove(OS_TCB *tcb)
+void OS_ReadyListRemove(OS_TCB *tcb)
 {
     OS_ASSERT(tcb != NULL);
     List_Remove(&ReadyList[tcb->Priority], tcb);
@@ -127,15 +138,43 @@ static void OS_ReadyListRemove(OS_TCB *tcb)
         g_PrioMap &= ~(1U << tcb->Priority);
 }
 
-OS_TCB *FindNextTask(void)
+
+void OS_TaskSuspend(OS_List *p_wait_list)
 {
-    OS_ASSERT(g_PrioMap != 0);
+    OS_ASSERT(p_wait_list != NULL);
 
-    uint8_t TopPrio = OS_GetTopPrio(g_PrioMap);
+    if (g_OSRunning == FALSE)
+        return; 
+    
+    CurrentTCB->State = TASK_BLOCKED;
+    OS_ReadyListRemove(CurrentTCB);
+    List_InsertTail(p_wait_list, CurrentTCB);
+    
+    NextTCB = FindNextTask();
+    OS_Trigger_SWI();
+}
 
-    OS_TCB *next_task = ReadyList[TopPrio].Head;
-    OS_ASSERT(next_task != NULL);
-    return next_task;
+OS_TCB* OS_TaskResume(OS_List *p_wait_list)
+{
+    OS_ASSERT(p_wait_list != NULL);
+    
+    if (p_wait_list->Head == NULL)
+        return NULL;
+    
+    OS_TCB *TaskToWake = List_PopHead(p_wait_list);
+    TaskToWake->State = TASK_READY;
+    OS_ReadyListAdd(TaskToWake);
+    
+    return TaskToWake;
+}
+
+void OS_TaskResumeAndSchedule(OS_List *p_wait_list)
+{
+    if (OS_TaskResume(p_wait_list) != NULL)
+    {
+        NextTCB = FindNextTask();
+        OS_Trigger_SWI();
+    }
 }
 
 /* 函数实现 ----------------------------------------------------------- */
@@ -216,7 +255,7 @@ void OS_Tick_Handler(void)
     {
         if (DelayList.Head->DelayTicks > 0)
             DelayList.Head->DelayTicks--;
-        while (DelayList.Head->DelayTicks == 0 && DelayList.Head != NULL)
+        while (DelayList.Head != NULL && DelayList.Head->DelayTicks == 0)
         {
             OS_TCB *tcb_to_wake = List_PopHead(&DelayList);
             tcb_to_wake->State = TASK_READY;
@@ -340,20 +379,13 @@ OS_Status OS_SemWait(OS_Sem *p_sem)
         OS_ExitCritical();
         return OS_OK; // 成功返回
     }
-    else // 原本没信号量，我睡觉去了，直到信号量来了
-    {
-        CurrentTCB->State = TASK_BLOCKED; // 设置当前任务状态
+    // 原本没信号量，我睡觉去了，直到信号量来了
 
-        OS_ReadyListRemove(CurrentTCB);
+    OS_TaskSuspend(&p_sem->WaitList);
+    OS_ExitCritical();
 
-        List_InsertTail(&p_sem->WaitList, CurrentTCB);
-
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
-        OS_ExitCritical();
-
-        return OS_OK;
-    }
+    return OS_OK;
+    
 }
 
 OS_Status OS_SemPost(OS_Sem *p_sem)
@@ -364,22 +396,46 @@ OS_Status OS_SemPost(OS_Sem *p_sem)
     if (p_sem->WaitList.Head == NULL)
     {
         p_sem->count++;
-        OS_ExitCritical();
-        return OS_OK;
     }
     else
     {
-        OS_TCB *TaskToWake = List_PopHead(&p_sem->WaitList);
-        TaskToWake->State = TASK_READY;
-
-        OS_ReadyListAdd(TaskToWake);
-
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
-        OS_ExitCritical();
-
-        return OS_OK;
+        OS_TaskResumeAndSchedule(&p_sem->WaitList);
     }
+
+    OS_ExitCritical();
+    return OS_OK;
+}
+
+OS_Status OS_SemPostFromISR(OS_Sem *p_sem, uint8_t *pxHigherPrioTaskWoken)
+{
+    if (p_sem == NULL)
+        return OS_ERR_PARAM;
+
+    /* 初始化输出参数 */
+    if (pxHigherPrioTaskWoken != NULL)
+        *pxHigherPrioTaskWoken = FALSE;
+
+    if (p_sem->WaitList.Head == NULL)
+    {
+        /* 没有任务在等待，直接增加计数 */
+        p_sem->count++;
+    }
+    else
+    {
+        /* 有任务在等待，唤醒第一个 */
+        OS_TCB *TaskToWake = OS_TaskResume(&p_sem->WaitList);
+
+        /* 检查是否需要上下文切换 */
+        if (pxHigherPrioTaskWoken != NULL && TaskToWake != NULL)
+        {
+            if (TaskToWake->Priority < CurrentTCB->Priority)
+            {
+                *pxHigherPrioTaskWoken = TRUE;
+            }
+        }
+    }
+
+    return OS_OK;
 }
 
 OS_Status OS_MutexInit(OS_Mutex *p_mutex)
@@ -552,15 +608,55 @@ OS_Status OS_QueueSend(OS_Queue *p_queue, void *p_msg)
     /* 消息数 + 1 */
     p_queue->MsgCount++;
 
-    if (p_queue->WaitReadList.Head != NULL) // 如果有人在等，直接触发任务切换
-    {
-        OS_TCB *TaskToWake = List_PopHead(&p_queue->WaitReadList);
-        TaskToWake->State = TASK_READY;
-        OS_ReadyListAdd(TaskToWake);
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
-    }
+    if(p_queue->WaitReadList.Head != NULL)
+        OS_TaskResumeAndSchedule(&p_queue->WaitReadList);
+
     OS_ExitCritical();
+
+    return OS_OK;
+}
+
+OS_Status OS_QueueSendFromISR(OS_Queue *p_queue, void *p_msg, uint8_t *pxHigherPrioTaskWoken)
+{
+    if (p_queue == NULL || p_msg == NULL)
+        return OS_ERR_PARAM;
+
+    /* 初始化输出参数 */
+    if (pxHigherPrioTaskWoken != NULL)
+        *pxHigherPrioTaskWoken = FALSE;
+
+    /* 队列满，直接返回错误（ISR 中不能阻塞） */
+    if (p_queue->MsgCount >= p_queue->QSize)
+    {
+        return OS_ERR_Q_FULL;
+    }
+
+    /* 计算写入地址 */
+    uint8_t *WriteAddr = (uint8_t *)p_queue->Buffer + ((p_queue->Head) * (p_queue->MsgSize));
+    
+    /* 拷贝消息 */
+    memcpy(WriteAddr, p_msg, p_queue->MsgSize);
+    
+    /* 更新写指针（环形缓冲） */
+    p_queue->Head = (p_queue->Head + 1) % p_queue->QSize;
+    
+    /* 消息数 + 1 */
+    p_queue->MsgCount++;
+
+    /* 如果有任务在等待读取，唤醒它 */
+    if (p_queue->WaitReadList.Head != NULL)
+    {
+        OS_TCB *TaskToWake = OS_TaskResume(&p_queue->WaitReadList);
+
+        /* 检查是否需要上下文切换 */
+        if (pxHigherPrioTaskWoken != NULL)
+        {
+            if (TaskToWake->Priority < CurrentTCB->Priority)
+            {
+                *pxHigherPrioTaskWoken = TRUE;
+            }
+        }
+    }
 
     return OS_OK;
 }
@@ -575,11 +671,7 @@ OS_Status OS_QueueReceive(OS_Queue *p_queue, void *p_msg_buffer)
     while (p_queue->MsgCount == 0) // 队列里无数据
     {
         /* 当前任务进入阻塞态，等待下一次切回来 */
-        CurrentTCB->State = TASK_BLOCKED;
-        OS_ReadyListRemove(CurrentTCB);
-        List_InsertTail(&p_queue->WaitReadList, CurrentTCB);
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
+        OS_TaskSuspend(&p_queue->WaitReadList);
         OS_ExitCritical();
 
         /* 回来了，此时重新查看队列里是否有数据 */
@@ -592,6 +684,36 @@ OS_Status OS_QueueReceive(OS_Queue *p_queue, void *p_msg_buffer)
     p_queue->MsgCount--;
 
     OS_ExitCritical();
+    return OS_OK;
+}
+
+OS_Status OS_QueueReceiveFromISR(OS_Queue *p_queue, void *p_msg_buffer, uint8_t *pxHigherPrioTaskWoken)
+{
+    if (p_queue == NULL || p_msg_buffer == NULL)
+        return OS_ERR_PARAM;
+
+    /* 初始化输出参数（预留） */
+    if (pxHigherPrioTaskWoken != NULL)
+        *pxHigherPrioTaskWoken = FALSE;
+
+    /* 队列为空，直接返回错误（ISR 中不能阻塞） */
+    if (p_queue->MsgCount == 0)
+    {
+        return OS_ERR_RESOURCE;
+    }
+
+    /* 计算读取地址 */
+    uint8_t *ReadAddr = (uint8_t *)p_queue->Buffer + ((p_queue->Tail) * (p_queue->MsgSize));
+    
+    /* 拷贝消息 */
+    memcpy(p_msg_buffer, ReadAddr, p_queue->MsgSize);
+    
+    /* 更新读指针（环形缓冲） */
+    p_queue->Tail = (p_queue->Tail + 1) % p_queue->QSize;
+    
+    /* 消息数 - 1 */
+    p_queue->MsgCount--;
+
     return OS_OK;
 }
 
@@ -636,12 +758,7 @@ void *OS_MemGet(OS_Mem *p_mem)
 
     while(p_mem->FreeBlocks == 0)
     {
-        CurrentTCB->State = TASK_BLOCKED;
-        OS_ReadyListRemove(CurrentTCB);
-        List_InsertTail(&p_mem->WaitList, CurrentTCB);
-
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
+        OS_TaskSuspend(&p_mem->WaitList);
         OS_ExitCritical();
 
         OS_EnterCritical();
@@ -684,16 +801,7 @@ OS_Status OS_MemPut(OS_Mem *p_mem, void *p_block)
     p_mem->FreeList = p_block;
     p_mem->FreeBlocks++;
 
-    if (p_mem->WaitList.Head != NULL)
-    {
-        OS_TCB *TaskToWake = List_PopHead(&p_mem->WaitList);
-        TaskToWake->State = TASK_READY;
-        OS_ReadyListAdd(TaskToWake);
-        
-        // 触发调度
-        NextTCB = FindNextTask();
-        OS_Trigger_SWI();
-    }
+    OS_TaskResumeAndSchedule(&p_mem->WaitList);
 
     OS_ExitCritical();
     return OS_OK;
@@ -702,9 +810,9 @@ OS_Status OS_MemPut(OS_Mem *p_mem, void *p_block)
 void OS_AssertFailed(const char *file, int line)
 {
     OS_Disable_IRQ();
-    // printf("OS ASSERT FAILED !!!\r\n");
-    // printf("File: %s\r\n", file);
-    // printf("Line: %d\r\n", line);
+    printf("OS ASSERT FAILED !!!\r\n");
+    printf("File: %s\r\n", file);
+    printf("Line: %d\r\n", line);
     while (1)
     {
         // LED_Toggle();

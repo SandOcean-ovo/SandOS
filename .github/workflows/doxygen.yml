@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:  # 添加手动触发
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -22,8 +22,10 @@ jobs:
           doxyfile-path: 'Doxyfile'
           working-directory: './docs'
 
-      - name: Add .nojekyll file
-        run: touch ./docs/html/.nojekyll
+      - name: Fix permissions and add .nojekyll
+        run: |
+          sudo chown -R $(whoami) ./docs/html
+          touch ./docs/html/.nojekyll
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

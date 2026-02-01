@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: 互斥锁</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">互斥锁</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁结构体定义  <a href="structMutex.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga6757591e5ea449d678c0300497baab65"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structMutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a></td></tr>
+<tr class="memdesc:ga6757591e5ea449d678c0300497baab65"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁结构体定义  <a href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">更多...</a><br /></td></tr>
+<tr class="separator:ga6757591e5ea449d678c0300497baab65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#gaec42b1570205757d2d98fd4d72eb2d5c">OS_MutexInit</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化互斥锁  <a href="group__Mutex.html#gaec42b1570205757d2d98fd4d72eb2d5c">更多...</a><br /></td></tr>
+<tr class="separator:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#gab3fc4d64cb594fc4e86f97830ac060fd">OS_MutexPend</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">申请互斥锁 (Lock)  <a href="group__Mutex.html#gab3fc4d64cb594fc4e86f97830ac060fd">更多...</a><br /></td></tr>
+<tr class="separator:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26cda85d0321182d0e4aa589f8bced1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#ga26cda85d0321182d0e4aa589f8bced1c">OS_MutexPost</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:ga26cda85d0321182d0e4aa589f8bced1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放互斥锁 (Unlock)  <a href="group__Mutex.html#ga26cda85d0321182d0e4aa589f8bced1c">更多...</a><br /></td></tr>
+<tr class="separator:ga26cda85d0321182d0e4aa589f8bced1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga6757591e5ea449d678c0300497baab65" name="ga6757591e5ea449d678c0300497baab65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6757591e5ea449d678c0300497baab65">&#9670;&#160;</a></span>OS_Mutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structMutex.html">Mutex</a> <a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>互斥锁结构体定义 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaec42b1570205757d2d98fd4d72eb2d5c" name="gaec42b1570205757d2d98fd4d72eb2d5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec42b1570205757d2d98fd4d72eb2d5c">&#9670;&#160;</a></span>OS_MutexInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_MutexInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *&#160;</td>
+          <td class="paramname"><em>p_mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化互斥锁 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mutex</td><td>指向互斥锁对象的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+
+</div>
+</div>
+<a id="gab3fc4d64cb594fc4e86f97830ac060fd" name="gab3fc4d64cb594fc4e86f97830ac060fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3fc4d64cb594fc4e86f97830ac060fd">&#9670;&#160;</a></span>OS_MutexPend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_MutexPend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *&#160;</td>
+          <td class="paramname"><em>p_mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>申请互斥锁 (Lock) </p>
+<p >支持递归上锁。支持优先级继承机制以防止优先级翻转。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mutex</td><td>指向互斥锁对象的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+
+</div>
+</div>
+<a id="ga26cda85d0321182d0e4aa589f8bced1c" name="ga26cda85d0321182d0e4aa589f8bced1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga26cda85d0321182d0e4aa589f8bced1c">&#9670;&#160;</a></span>OS_MutexPost()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_MutexPost </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *&#160;</td>
+          <td class="paramname"><em>p_mutex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放互斥锁 (Unlock) </p>
+<p >只有锁的持有者才能释放锁。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mutex</td><td>指向互斥锁对象的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OS_OK</td><td>成功 </td></tr>
+    <tr><td class="paramname">OS_ERR_NOT_OWNER</td><td>当前任务不是锁的持有者 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

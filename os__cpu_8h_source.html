@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: /github/workspace/Source/Portable/RISC-V QingkeV4/os_cpu.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_b525ff8b6e5cbe90b84ec83f473aa918.html">Portable</a></li><li class="navelem"><a class="el" href="dir_1b406162997da7cf09290d407cc57bf1.html">RISC-V QingkeV4</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">os_cpu.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="os__cpu_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __OS_CPU_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __OS_CPU_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="os__common_8h.html">os_common.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;ch32v20x.h&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="os__cpu_8h.html#af88d510fb584d5684c9cac9021fb4257">    8</a></span><span class="preprocessor">#define MSTATUS_VALUE 0x00001880 </span><span class="comment">// mstatus值的初始状态：开启中断，特权模式</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef SysTick_CTLR_SWIE</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="os__cpu_8h.html#a62992e84f827261cbb3e4c92f4b7e3e8">   10</a></span><span class="preprocessor">#define SysTick_CTLR_SWIE (1 &lt;&lt; 31)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">extern</span> <span class="keyword">const</span> uint8_t <a class="code hl_variable" href="os__cpu_8h.html#a3bd1b8de24e8d66a356c71c7ede07bd7">OS_MapTable</a>[256];</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>uint32_t* <a class="code hl_function" href="group__Porting.html#gaa39f2c6de0b61c320d17051f72e54f7c">OS_StackInit</a>(<a class="code hl_typedef" href="os__common_8h.html#a74fc33ca899b04e631a66777fb9262a6">OS_TaskFunc_t</a> task_function, <span class="keywordtype">void</span>* task_param, uint32_t *stack_init_address, uint32_t stack_depth);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Porting.html#gaad31c57a92caa2517f66bfae1dae356b">OS_Init_Timer</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Porting.html#ga5ca9b83c0abb22f638db13cd8a2c9345">OS_Tick_Reset</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Porting.html#ga390b3a4a6c3648a510be6c42652b7a38">OS_Trigger_SWI</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Porting.html#gaf84ed90da235703c3d6049c5c831fc1d">OS_Enable_IRQ</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__Porting.html#ga3125a3970f197686b5cf7c0f07c06a0d">OS_Disable_IRQ</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>uint8_t <a class="code hl_function" href="group__Porting.html#ga8b23816b2c08042112cc69022103e32d">OS_GetTopPrio</a>(uint32_t PrioMap);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> <span class="comment">// end of group Porting</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">/* __OS_CPU_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="agroup__Porting_html_ga3125a3970f197686b5cf7c0f07c06a0d"><div class="ttname"><a href="group__Porting.html#ga3125a3970f197686b5cf7c0f07c06a0d">OS_Disable_IRQ</a></div><div class="ttdeci">void OS_Disable_IRQ(void)</div><div class="ttdoc">关闭全局中断</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00083">os_cpu.c:83</a></div></div>
+<div class="ttc" id="agroup__Porting_html_ga390b3a4a6c3648a510be6c42652b7a38"><div class="ttname"><a href="group__Porting.html#ga390b3a4a6c3648a510be6c42652b7a38">OS_Trigger_SWI</a></div><div class="ttdeci">void OS_Trigger_SWI(void)</div><div class="ttdoc">触发软件中断 (SWI)</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00073">os_cpu.c:73</a></div></div>
+<div class="ttc" id="agroup__Porting_html_ga5ca9b83c0abb22f638db13cd8a2c9345"><div class="ttname"><a href="group__Porting.html#ga5ca9b83c0abb22f638db13cd8a2c9345">OS_Tick_Reset</a></div><div class="ttdeci">void OS_Tick_Reset(void)</div><div class="ttdoc">复位 SysTick</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00067">os_cpu.c:67</a></div></div>
+<div class="ttc" id="agroup__Porting_html_ga8b23816b2c08042112cc69022103e32d"><div class="ttname"><a href="group__Porting.html#ga8b23816b2c08042112cc69022103e32d">OS_GetTopPrio</a></div><div class="ttdeci">uint8_t OS_GetTopPrio(uint32_t PrioMap)</div><div class="ttdoc">获取最高优先级</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00088">os_cpu.c:88</a></div></div>
+<div class="ttc" id="agroup__Porting_html_gaa39f2c6de0b61c320d17051f72e54f7c"><div class="ttname"><a href="group__Porting.html#gaa39f2c6de0b61c320d17051f72e54f7c">OS_StackInit</a></div><div class="ttdeci">uint32_t * OS_StackInit(OS_TaskFunc_t task_function, void *task_param, uint32_t *stack_init_address, uint32_t stack_depth)</div><div class="ttdoc">初始化任务栈</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00031">os_cpu.c:31</a></div></div>
+<div class="ttc" id="agroup__Porting_html_gaad31c57a92caa2517f66bfae1dae356b"><div class="ttname"><a href="group__Porting.html#gaad31c57a92caa2517f66bfae1dae356b">OS_Init_Timer</a></div><div class="ttdeci">void OS_Init_Timer(void)</div><div class="ttdoc">初始化 SysTick</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00053">os_cpu.c:53</a></div></div>
+<div class="ttc" id="agroup__Porting_html_gaf84ed90da235703c3d6049c5c831fc1d"><div class="ttname"><a href="group__Porting.html#gaf84ed90da235703c3d6049c5c831fc1d">OS_Enable_IRQ</a></div><div class="ttdeci">void OS_Enable_IRQ(void)</div><div class="ttdoc">开启全局中断</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00078">os_cpu.c:78</a></div></div>
+<div class="ttc" id="aos__common_8h_html"><div class="ttname"><a href="os__common_8h.html">os_common.h</a></div></div>
+<div class="ttc" id="aos__common_8h_html_a74fc33ca899b04e631a66777fb9262a6"><div class="ttname"><a href="os__common_8h.html#a74fc33ca899b04e631a66777fb9262a6">OS_TaskFunc_t</a></div><div class="ttdeci">void(* OS_TaskFunc_t)(void *p_arg)</div><div class="ttdoc">任务函数指针类型</div><div class="ttdef"><b>Definition:</b> <a href="os__common_8h_source.html#l00023">os_common.h:23</a></div></div>
+<div class="ttc" id="aos__cpu_8h_html_a3bd1b8de24e8d66a356c71c7ede07bd7"><div class="ttname"><a href="os__cpu_8h.html#a3bd1b8de24e8d66a356c71c7ede07bd7">OS_MapTable</a></div><div class="ttdeci">const uint8_t OS_MapTable[256]</div><div class="ttdef"><b>Definition:</b> <a href="os__cpu_8c_source.html#l00003">os_cpu.c:3</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

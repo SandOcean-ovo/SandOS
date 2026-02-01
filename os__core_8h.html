@@ -1,0 +1,406 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: /github/workspace/Source/Inc/os_core.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_74389ed8173ad57b461b9d623a1f3867.html">Source</a></li><li class="navelem"><a class="el" href="dir_5fd189f1ca3dd94e4d9a31bd1c11c6c0.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#define-members">宏定义</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">os_core.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>RTOS 核心内核头文件  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="os__cpu_8h_source.html">os_cpu.h</a>&quot;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div>
+<p><a href="os__core_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html">Task_Control_Block</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务控制块结构体定义  <a href="structTask__Control__Block.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structList.html">List</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务链表结构体定义  <a href="structList.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSemaphore.html">Semaphore</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量结构体定义  <a href="structSemaphore.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMutex.html">Mutex</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁结构体定义  <a href="structMutex.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html">Queue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体定义  <a href="structQueue.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMemBlock.html">MemBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存池控制块  <a href="structMemBlock.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga5a4eaedba6ce2dd34d625fb9114c8483">IDLE_STACK_SIZE</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲任务栈大小  <a href="group__Core.html#ga5a4eaedba6ce2dd34d625fb9114c8483">更多...</a><br /></td></tr>
+<tr class="separator:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga6abd1e5e4d165f4e4be37d94cb97de66">OS_MAX_PRIO</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大支持优先级数量 (0-31)  <a href="group__Core.html#ga6abd1e5e4d165f4e4be37d94cb97de66">更多...</a><br /></td></tr>
+<tr class="separator:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ba84e973e8fb13eb588c226e323ac85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga8ba84e973e8fb13eb588c226e323ac85">OS_STACK_MAGIC_VAL</a>&#160;&#160;&#160;0xDEADBEEF</td></tr>
+<tr class="memdesc:ga8ba84e973e8fb13eb588c226e323ac85"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈溢出检测魔法值  <a href="group__Core.html#ga8ba84e973e8fb13eb588c226e323ac85">更多...</a><br /></td></tr>
+<tr class="separator:ga8ba84e973e8fb13eb588c226e323ac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga33984cd4628943443df91d3d42f87018"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structTask__Control__Block.html">Task_Control_Block</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a></td></tr>
+<tr class="memdesc:ga33984cd4628943443df91d3d42f87018"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务控制块结构体定义  <a href="group__Task.html#ga33984cd4628943443df91d3d42f87018">更多...</a><br /></td></tr>
+<tr class="separator:ga33984cd4628943443df91d3d42f87018"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa8133d9a9062060fd7208d370a24b6bf"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structList.html">List</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a></td></tr>
+<tr class="memdesc:gaa8133d9a9062060fd7208d370a24b6bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务链表结构体定义  <a href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">更多...</a><br /></td></tr>
+<tr class="separator:gaa8133d9a9062060fd7208d370a24b6bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga14ad4dc603b2fd3d9312449848f7d054"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structSemaphore.html">Semaphore</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">OS_Sem</a></td></tr>
+<tr class="memdesc:ga14ad4dc603b2fd3d9312449848f7d054"><td class="mdescLeft">&#160;</td><td class="mdescRight">信号量结构体定义  <a href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">更多...</a><br /></td></tr>
+<tr class="separator:ga14ad4dc603b2fd3d9312449848f7d054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6757591e5ea449d678c0300497baab65"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structMutex.html">Mutex</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a></td></tr>
+<tr class="memdesc:ga6757591e5ea449d678c0300497baab65"><td class="mdescLeft">&#160;</td><td class="mdescRight">互斥锁结构体定义  <a href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">更多...</a><br /></td></tr>
+<tr class="separator:ga6757591e5ea449d678c0300497baab65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structQueue.html">Queue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a></td></tr>
+<tr class="memdesc:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体定义  <a href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">更多...</a><br /></td></tr>
+<tr class="separator:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structMemBlock.html">MemBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a></td></tr>
+<tr class="memdesc:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存池控制块  <a href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">更多...</a><br /></td></tr>
+<tr class="separator:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> { <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ad0890dc7de5480694640ab78b72cf9b7">OS_OK</a> = 0
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ae09719d2a39fa6aaae7e01f1baedac56">OS_ERR_PARAM</a> = 1
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a28f7bbfdb3fb00dea7502be0acd372e4">OS_ERR_TIMEOUT</a> = 2
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a3a9dd1fbcf3cdc4bfc12df7b1c88e448">OS_ERR_RESOURCE</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a61fd1034d49e81c9b3d30ddd3a66bf2c">OS_ERR_NOT_OWNER</a> = 10
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ab17e74b0f1a3a471e0c4820578219eb0">OS_ERR_NESTING</a> = 11
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5af12c1969414d53c6cad040c093d2b2e0">OS_ERR_Q_FULL</a> = 15
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5aa5649db40feccc80b210ec25d7b84e44">OS_ERR_INVALID_ADDR</a> = 18
+, <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a7619d6e99efa7ae959c981568b99e82c">OS_ERR_NOT_ALIGN</a> = 19
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a75613cef397bd1baaea2bdb0a4ca7e78">OS_ERR_ISR</a> = 20
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数返回状态枚举  <a href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">更多...</a><br /></td></tr>
+<tr class="separator:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab8f94cd23d1004657ab6e72f6a38dc78"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Task.html#gab8f94cd23d1004657ab6e72f6a38dc78">OS_TaskState</a> { <a class="el" href="group__Task.html#ggab8f94cd23d1004657ab6e72f6a38dc78aebcd951a6127c3c50a4f197b2b637793">TASK_READY</a> = 0
+, <a class="el" href="group__Task.html#ggab8f94cd23d1004657ab6e72f6a38dc78a108284117a3f463352658a08930a3888">TASK_BLOCKED</a>
+, <a class="el" href="group__Task.html#ggab8f94cd23d1004657ab6e72f6a38dc78a147724c9299fb3c1ec40b06a3da513c6">TASK_DELETED</a>
+ }</td></tr>
+<tr class="memdesc:gab8f94cd23d1004657ab6e72f6a38dc78"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务状态枚举  <a href="group__Task.html#gab8f94cd23d1004657ab6e72f6a38dc78">更多...</a><br /></td></tr>
+<tr class="separator:gab8f94cd23d1004657ab6e72f6a38dc78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga7cfbad8ed60ba89b22bbf3f8ad3b029c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Task.html#ga7cfbad8ed60ba89b22bbf3f8ad3b029c">OS_TaskCreate</a> (<a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a> *tcb, <a class="el" href="os__common_8h.html#a74fc33ca899b04e631a66777fb9262a6">OS_TaskFunc_t</a> task_function, void *task_param, uint32_t *stack_init_address, uint32_t stack_depth, uint8_t priority)</td></tr>
+<tr class="memdesc:ga7cfbad8ed60ba89b22bbf3f8ad3b029c"><td class="mdescLeft">&#160;</td><td class="mdescRight">新建任务  <a href="group__Task.html#ga7cfbad8ed60ba89b22bbf3f8ad3b029c">更多...</a><br /></td></tr>
+<tr class="separator:ga7cfbad8ed60ba89b22bbf3f8ad3b029c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga12edd36136ff52b8f64ec704a6ee5ab2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Task.html#ga12edd36136ff52b8f64ec704a6ee5ab2">OS_Delay</a> (uint32_t ticks)</td></tr>
+<tr class="memdesc:ga12edd36136ff52b8f64ec704a6ee5ab2"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务阻塞延时  <a href="group__Task.html#ga12edd36136ff52b8f64ec704a6ee5ab2">更多...</a><br /></td></tr>
+<tr class="separator:ga12edd36136ff52b8f64ec704a6ee5ab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gacb6df8f47f418aad9c9a9e045d7d1e6d">OS_Init</a> (void)</td></tr>
+<tr class="memdesc:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 OS 内核  <a href="group__Core.html#gacb6df8f47f418aad9c9a9e045d7d1e6d">更多...</a><br /></td></tr>
+<tr class="separator:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d7ccf977a446a79fbda65bc7df51971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga2d7ccf977a446a79fbda65bc7df51971">OS_StartScheduler</a> (void)</td></tr>
+<tr class="memdesc:ga2d7ccf977a446a79fbda65bc7df51971"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启调度器  <a href="group__Core.html#ga2d7ccf977a446a79fbda65bc7df51971">更多...</a><br /></td></tr>
+<tr class="separator:ga2d7ccf977a446a79fbda65bc7df51971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab47154e395ba5b1506de9fa136daeb0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gab47154e395ba5b1506de9fa136daeb0b">OS_Tick_Handler</a> (void)</td></tr>
+<tr class="memdesc:gab47154e395ba5b1506de9fa136daeb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 SysTick 中断的“回调函数”  <a href="group__Core.html#gab47154e395ba5b1506de9fa136daeb0b">更多...</a><br /></td></tr>
+<tr class="separator:gab47154e395ba5b1506de9fa136daeb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca35d2cf626b48c8241529eca160858d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gaca35d2cf626b48c8241529eca160858d">OS_EnterCritical</a> (void)</td></tr>
+<tr class="memdesc:gaca35d2cf626b48c8241529eca160858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入临界区  <a href="group__Core.html#gaca35d2cf626b48c8241529eca160858d">更多...</a><br /></td></tr>
+<tr class="separator:gaca35d2cf626b48c8241529eca160858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d6d3103d058939a175a2c540b25795e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga9d6d3103d058939a175a2c540b25795e">OS_ExitCritical</a> (void)</td></tr>
+<tr class="memdesc:ga9d6d3103d058939a175a2c540b25795e"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出临界区  <a href="group__Core.html#ga9d6d3103d058939a175a2c540b25795e">更多...</a><br /></td></tr>
+<tr class="separator:ga9d6d3103d058939a175a2c540b25795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60aa25ae503ebbe966f087d76575a01a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Semaphore.html#ga60aa25ae503ebbe966f087d76575a01a">OS_SemInit</a> (<a class="el" href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">OS_Sem</a> *p_sem)</td></tr>
+<tr class="memdesc:ga60aa25ae503ebbe966f087d76575a01a"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化信号量  <a href="group__Semaphore.html#ga60aa25ae503ebbe966f087d76575a01a">更多...</a><br /></td></tr>
+<tr class="separator:ga60aa25ae503ebbe966f087d76575a01a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1120967943b94c30784d5ecc1e4288b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Semaphore.html#gae1120967943b94c30784d5ecc1e4288b">OS_SemWait</a> (<a class="el" href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">OS_Sem</a> *p_sem)</td></tr>
+<tr class="memdesc:gae1120967943b94c30784d5ecc1e4288b"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待信号量 (P操作)  <a href="group__Semaphore.html#gae1120967943b94c30784d5ecc1e4288b">更多...</a><br /></td></tr>
+<tr class="separator:gae1120967943b94c30784d5ecc1e4288b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa810c2183bca1aff80cc0c4ddda940f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Semaphore.html#gaa810c2183bca1aff80cc0c4ddda940f9">OS_SemPost</a> (<a class="el" href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">OS_Sem</a> *p_sem)</td></tr>
+<tr class="memdesc:gaa810c2183bca1aff80cc0c4ddda940f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送信号量 (V操作)  <a href="group__Semaphore.html#gaa810c2183bca1aff80cc0c4ddda940f9">更多...</a><br /></td></tr>
+<tr class="separator:gaa810c2183bca1aff80cc0c4ddda940f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga92eb25687977020289c51f7f419f2362"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Semaphore.html#ga92eb25687977020289c51f7f419f2362">OS_SemPostFromISR</a> (<a class="el" href="group__Semaphore.html#ga14ad4dc603b2fd3d9312449848f7d054">OS_Sem</a> *p_sem, uint8_t *pxHigherPrioTaskWoken)</td></tr>
+<tr class="memdesc:ga92eb25687977020289c51f7f419f2362"><td class="mdescLeft">&#160;</td><td class="mdescRight">在中断中发送信号量 (V操作)  <a href="group__Semaphore.html#ga92eb25687977020289c51f7f419f2362">更多...</a><br /></td></tr>
+<tr class="separator:ga92eb25687977020289c51f7f419f2362"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#gaec42b1570205757d2d98fd4d72eb2d5c">OS_MutexInit</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化互斥锁  <a href="group__Mutex.html#gaec42b1570205757d2d98fd4d72eb2d5c">更多...</a><br /></td></tr>
+<tr class="separator:gaec42b1570205757d2d98fd4d72eb2d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#gab3fc4d64cb594fc4e86f97830ac060fd">OS_MutexPend</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">申请互斥锁 (Lock)  <a href="group__Mutex.html#gab3fc4d64cb594fc4e86f97830ac060fd">更多...</a><br /></td></tr>
+<tr class="separator:gab3fc4d64cb594fc4e86f97830ac060fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga26cda85d0321182d0e4aa589f8bced1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Mutex.html#ga26cda85d0321182d0e4aa589f8bced1c">OS_MutexPost</a> (<a class="el" href="group__Mutex.html#ga6757591e5ea449d678c0300497baab65">OS_Mutex</a> *p_mutex)</td></tr>
+<tr class="memdesc:ga26cda85d0321182d0e4aa589f8bced1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放互斥锁 (Unlock)  <a href="group__Mutex.html#ga26cda85d0321182d0e4aa589f8bced1c">更多...</a><br /></td></tr>
+<tr class="separator:ga26cda85d0321182d0e4aa589f8bced1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga0a1f3c0156476f18a58fb45bd23cddd3">OS_QueueInit</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *buffer, uint16_t msg_size, uint16_t queue_size)</td></tr>
+<tr class="memdesc:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化队列  <a href="group__Queue.html#ga0a1f3c0156476f18a58fb45bd23cddd3">更多...</a><br /></td></tr>
+<tr class="separator:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga0ffa7d81d03cb6e202b012fc41769d6b">OS_QueueSend</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg)</td></tr>
+<tr class="memdesc:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送消息（入队）  <a href="group__Queue.html#ga0ffa7d81d03cb6e202b012fc41769d6b">更多...</a><br /></td></tr>
+<tr class="separator:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga7e7ae1663c3618abcf9ffe3413e29a44">OS_QueueReceive</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg_buffer)</td></tr>
+<tr class="memdesc:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收消息（出队）  <a href="group__Queue.html#ga7e7ae1663c3618abcf9ffe3413e29a44">更多...</a><br /></td></tr>
+<tr class="separator:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga910a2e18888ff96f6a1e34ea4f0bf606">OS_QueueSendFromISR</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg, uint8_t *pxHigherPrioTaskWoken)</td></tr>
+<tr class="memdesc:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="mdescLeft">&#160;</td><td class="mdescRight">在中断中发送消息（入队）  <a href="group__Queue.html#ga910a2e18888ff96f6a1e34ea4f0bf606">更多...</a><br /></td></tr>
+<tr class="separator:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdfebee8af64e6d5c193e52f804b6253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#gabdfebee8af64e6d5c193e52f804b6253">OS_QueueReceiveFromISR</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg_buffer, uint8_t *pxHigherPrioTaskWoken)</td></tr>
+<tr class="memdesc:gabdfebee8af64e6d5c193e52f804b6253"><td class="mdescLeft">&#160;</td><td class="mdescRight">在中断中接收消息（出队）  <a href="group__Queue.html#gabdfebee8af64e6d5c193e52f804b6253">更多...</a><br /></td></tr>
+<tr class="separator:gabdfebee8af64e6d5c193e52f804b6253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad34fe6316597a79231ea3f65197468b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gaad34fe6316597a79231ea3f65197468b">OS_MemInit</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem, void *start_addr, uint32_t blocks, uint32_t block_size)</td></tr>
+<tr class="memdesc:gaad34fe6316597a79231ea3f65197468b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化固定大小内存池  <a href="group__Memory.html#gaad34fe6316597a79231ea3f65197468b">更多...</a><br /></td></tr>
+<tr class="separator:gaad34fe6316597a79231ea3f65197468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac934e2698ada3c2ab1338170fd9cad15"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gac934e2698ada3c2ab1338170fd9cad15">OS_MemGet</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem)</td></tr>
+<tr class="memdesc:gac934e2698ada3c2ab1338170fd9cad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">申请内存块  <a href="group__Memory.html#gac934e2698ada3c2ab1338170fd9cad15">更多...</a><br /></td></tr>
+<tr class="separator:gac934e2698ada3c2ab1338170fd9cad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga0cb58b9e50830e7946e5f9d140b26fb3">OS_MemPut</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem, void *p_block)</td></tr>
+<tr class="memdesc:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放内存块  <a href="group__Memory.html#ga0cb58b9e50830e7946e5f9d140b26fb3">更多...</a><br /></td></tr>
+<tr class="separator:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:aa5eb885813b237fd70148fed449fc167"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#aa5eb885813b237fd70148fed449fc167">g_SystemTickCount</a></td></tr>
+<tr class="separator:aa5eb885813b237fd70148fed449fc167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48b4a44abe4e5a04fc34493417f8efd9"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#a48b4a44abe4e5a04fc34493417f8efd9">g_PrioMap</a></td></tr>
+<tr class="separator:a48b4a44abe4e5a04fc34493417f8efd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84fce9efdacdda1c2571c2b9aedb4982"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#a84fce9efdacdda1c2571c2b9aedb4982">ReadyList</a> [32]</td></tr>
+<tr class="separator:a84fce9efdacdda1c2571c2b9aedb4982"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df28713c1ba37728b9c8ef62168510b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#a9df28713c1ba37728b9c8ef62168510b">DelayList</a></td></tr>
+<tr class="separator:a9df28713c1ba37728b9c8ef62168510b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad863709b67f10c313f0691b311acb8c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#ad863709b67f10c313f0691b311acb8c1">CurrentTCB</a></td></tr>
+<tr class="separator:ad863709b67f10c313f0691b311acb8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2383a30cc8806ee73df310abb35caf94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="os__core_8h.html#a2383a30cc8806ee73df310abb35caf94">NextTCB</a></td></tr>
+<tr class="separator:a2383a30cc8806ee73df310abb35caf94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >RTOS 核心内核头文件 </p>
+<dl class="section author"><dt>作者</dt><dd>SandOcean </dd></dl>
+<dl class="section version"><dt>版本</dt><dd>V1.0 </dd></dl>
+<dl class="section date"><dt>日期</dt><dd>2025-12-14 </dd></dl>
+<p>本文件包含 RTOS 内核的核心定义与对外接口声明。 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 中定义.</p>
+</div><h2 class="groupheader">变量说明</h2>
+<a id="ad863709b67f10c313f0691b311acb8c1" name="ad863709b67f10c313f0691b311acb8c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad863709b67f10c313f0691b311acb8c1">&#9670;&#160;</a></span>CurrentTCB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a>* CurrentTCB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9df28713c1ba37728b9c8ef62168510b" name="a9df28713c1ba37728b9c8ef62168510b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df28713c1ba37728b9c8ef62168510b">&#9670;&#160;</a></span>DelayList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a> DelayList</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48b4a44abe4e5a04fc34493417f8efd9" name="a48b4a44abe4e5a04fc34493417f8efd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b4a44abe4e5a04fc34493417f8efd9">&#9670;&#160;</a></span>g_PrioMap</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t g_PrioMap</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5eb885813b237fd70148fed449fc167" name="aa5eb885813b237fd70148fed449fc167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5eb885813b237fd70148fed449fc167">&#9670;&#160;</a></span>g_SystemTickCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t g_SystemTickCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2383a30cc8806ee73df310abb35caf94" name="a2383a30cc8806ee73df310abb35caf94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2383a30cc8806ee73df310abb35caf94">&#9670;&#160;</a></span>NextTCB</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#ga33984cd4628943443df91d3d42f87018">OS_TCB</a>* NextTCB</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a84fce9efdacdda1c2571c2b9aedb4982" name="a84fce9efdacdda1c2571c2b9aedb4982"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84fce9efdacdda1c2571c2b9aedb4982">&#9670;&#160;</a></span>ReadyList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a> ReadyList[32]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

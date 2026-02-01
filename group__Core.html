@@ -1,0 +1,340 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: 核心管理</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">核心管理</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga5a4eaedba6ce2dd34d625fb9114c8483">IDLE_STACK_SIZE</a>&#160;&#160;&#160;128</td></tr>
+<tr class="memdesc:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="mdescLeft">&#160;</td><td class="mdescRight">空闲任务栈大小  <a href="group__Core.html#ga5a4eaedba6ce2dd34d625fb9114c8483">更多...</a><br /></td></tr>
+<tr class="separator:ga5a4eaedba6ce2dd34d625fb9114c8483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga6abd1e5e4d165f4e4be37d94cb97de66">OS_MAX_PRIO</a>&#160;&#160;&#160;32</td></tr>
+<tr class="memdesc:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="mdescLeft">&#160;</td><td class="mdescRight">最大支持优先级数量 (0-31)  <a href="group__Core.html#ga6abd1e5e4d165f4e4be37d94cb97de66">更多...</a><br /></td></tr>
+<tr class="separator:ga6abd1e5e4d165f4e4be37d94cb97de66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ba84e973e8fb13eb588c226e323ac85"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga8ba84e973e8fb13eb588c226e323ac85">OS_STACK_MAGIC_VAL</a>&#160;&#160;&#160;0xDEADBEEF</td></tr>
+<tr class="memdesc:ga8ba84e973e8fb13eb588c226e323ac85"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈溢出检测魔法值  <a href="group__Core.html#ga8ba84e973e8fb13eb588c226e323ac85">更多...</a><br /></td></tr>
+<tr class="separator:ga8ba84e973e8fb13eb588c226e323ac85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> { <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ad0890dc7de5480694640ab78b72cf9b7">OS_OK</a> = 0
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ae09719d2a39fa6aaae7e01f1baedac56">OS_ERR_PARAM</a> = 1
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a28f7bbfdb3fb00dea7502be0acd372e4">OS_ERR_TIMEOUT</a> = 2
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a3a9dd1fbcf3cdc4bfc12df7b1c88e448">OS_ERR_RESOURCE</a> = 3
+, <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a61fd1034d49e81c9b3d30ddd3a66bf2c">OS_ERR_NOT_OWNER</a> = 10
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5ab17e74b0f1a3a471e0c4820578219eb0">OS_ERR_NESTING</a> = 11
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5af12c1969414d53c6cad040c093d2b2e0">OS_ERR_Q_FULL</a> = 15
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5aa5649db40feccc80b210ec25d7b84e44">OS_ERR_INVALID_ADDR</a> = 18
+, <br />
+&#160;&#160;<a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a7619d6e99efa7ae959c981568b99e82c">OS_ERR_NOT_ALIGN</a> = 19
+, <a class="el" href="group__Core.html#gga3bf0246eee53a4c377820d89f10a7fe5a75613cef397bd1baaea2bdb0a4ca7e78">OS_ERR_ISR</a> = 20
+<br />
+ }</td></tr>
+<tr class="memdesc:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">函数返回状态枚举  <a href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">更多...</a><br /></td></tr>
+<tr class="separator:ga3bf0246eee53a4c377820d89f10a7fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gacb6df8f47f418aad9c9a9e045d7d1e6d">OS_Init</a> (void)</td></tr>
+<tr class="memdesc:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 OS 内核  <a href="group__Core.html#gacb6df8f47f418aad9c9a9e045d7d1e6d">更多...</a><br /></td></tr>
+<tr class="separator:gacb6df8f47f418aad9c9a9e045d7d1e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d7ccf977a446a79fbda65bc7df51971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga2d7ccf977a446a79fbda65bc7df51971">OS_StartScheduler</a> (void)</td></tr>
+<tr class="memdesc:ga2d7ccf977a446a79fbda65bc7df51971"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启调度器  <a href="group__Core.html#ga2d7ccf977a446a79fbda65bc7df51971">更多...</a><br /></td></tr>
+<tr class="separator:ga2d7ccf977a446a79fbda65bc7df51971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab47154e395ba5b1506de9fa136daeb0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gab47154e395ba5b1506de9fa136daeb0b">OS_Tick_Handler</a> (void)</td></tr>
+<tr class="memdesc:gab47154e395ba5b1506de9fa136daeb0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">处理 SysTick 中断的“回调函数”  <a href="group__Core.html#gab47154e395ba5b1506de9fa136daeb0b">更多...</a><br /></td></tr>
+<tr class="separator:gab47154e395ba5b1506de9fa136daeb0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca35d2cf626b48c8241529eca160858d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#gaca35d2cf626b48c8241529eca160858d">OS_EnterCritical</a> (void)</td></tr>
+<tr class="memdesc:gaca35d2cf626b48c8241529eca160858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">进入临界区  <a href="group__Core.html#gaca35d2cf626b48c8241529eca160858d">更多...</a><br /></td></tr>
+<tr class="separator:gaca35d2cf626b48c8241529eca160858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d6d3103d058939a175a2c540b25795e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Core.html#ga9d6d3103d058939a175a2c540b25795e">OS_ExitCritical</a> (void)</td></tr>
+<tr class="memdesc:ga9d6d3103d058939a175a2c540b25795e"><td class="mdescLeft">&#160;</td><td class="mdescRight">退出临界区  <a href="group__Core.html#ga9d6d3103d058939a175a2c540b25795e">更多...</a><br /></td></tr>
+<tr class="separator:ga9d6d3103d058939a175a2c540b25795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="ga5a4eaedba6ce2dd34d625fb9114c8483" name="ga5a4eaedba6ce2dd34d625fb9114c8483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a4eaedba6ce2dd34d625fb9114c8483">&#9670;&#160;</a></span>IDLE_STACK_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IDLE_STACK_SIZE&#160;&#160;&#160;128</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>空闲任务栈大小 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00045">45</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga6abd1e5e4d165f4e4be37d94cb97de66" name="ga6abd1e5e4d165f4e4be37d94cb97de66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6abd1e5e4d165f4e4be37d94cb97de66">&#9670;&#160;</a></span>OS_MAX_PRIO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_MAX_PRIO&#160;&#160;&#160;32</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>最大支持优先级数量 (0-31) </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00046">46</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga8ba84e973e8fb13eb588c226e323ac85" name="ga8ba84e973e8fb13eb588c226e323ac85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ba84e973e8fb13eb588c226e323ac85">&#9670;&#160;</a></span>OS_STACK_MAGIC_VAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define OS_STACK_MAGIC_VAL&#160;&#160;&#160;0xDEADBEEF</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>栈溢出检测魔法值 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">枚举类型说明</h2>
+<a id="ga3bf0246eee53a4c377820d89f10a7fe5" name="ga3bf0246eee53a4c377820d89f10a7fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3bf0246eee53a4c377820d89f10a7fe5">&#9670;&#160;</a></span>OS_Status</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>函数返回状态枚举 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5ad0890dc7de5480694640ab78b72cf9b7" name="gga3bf0246eee53a4c377820d89f10a7fe5ad0890dc7de5480694640ab78b72cf9b7"></a>OS_OK&#160;</td><td class="fielddoc"><p >成功 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5ae09719d2a39fa6aaae7e01f1baedac56" name="gga3bf0246eee53a4c377820d89f10a7fe5ae09719d2a39fa6aaae7e01f1baedac56"></a>OS_ERR_PARAM&#160;</td><td class="fielddoc"><p >参数错误（例如传入了 NULL 指针） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5a28f7bbfdb3fb00dea7502be0acd372e4" name="gga3bf0246eee53a4c377820d89f10a7fe5a28f7bbfdb3fb00dea7502be0acd372e4"></a>OS_ERR_TIMEOUT&#160;</td><td class="fielddoc"><p >等待超时（预留） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5a3a9dd1fbcf3cdc4bfc12df7b1c88e448" name="gga3bf0246eee53a4c377820d89f10a7fe5a3a9dd1fbcf3cdc4bfc12df7b1c88e448"></a>OS_ERR_RESOURCE&#160;</td><td class="fielddoc"><p >资源不可用（例如 TryLock 失败） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5a61fd1034d49e81c9b3d30ddd3a66bf2c" name="gga3bf0246eee53a4c377820d89f10a7fe5a61fd1034d49e81c9b3d30ddd3a66bf2c"></a>OS_ERR_NOT_OWNER&#160;</td><td class="fielddoc"><p >错误：试图释放一个不属于自己的锁 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5ab17e74b0f1a3a471e0c4820578219eb0" name="gga3bf0246eee53a4c377820d89f10a7fe5ab17e74b0f1a3a471e0c4820578219eb0"></a>OS_ERR_NESTING&#160;</td><td class="fielddoc"><p >错误：递归嵌套层数超过限制（防止溢出） </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5af12c1969414d53c6cad040c093d2b2e0" name="gga3bf0246eee53a4c377820d89f10a7fe5af12c1969414d53c6cad040c093d2b2e0"></a>OS_ERR_Q_FULL&#160;</td><td class="fielddoc"><p >错误：队列已满 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5aa5649db40feccc80b210ec25d7b84e44" name="gga3bf0246eee53a4c377820d89f10a7fe5aa5649db40feccc80b210ec25d7b84e44"></a>OS_ERR_INVALID_ADDR&#160;</td><td class="fielddoc"><p >错误：传入的指针地址不落在原始内存 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5a7619d6e99efa7ae959c981568b99e82c" name="gga3bf0246eee53a4c377820d89f10a7fe5a7619d6e99efa7ae959c981568b99e82c"></a>OS_ERR_NOT_ALIGN&#160;</td><td class="fielddoc"><p >错误：地址未对齐 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3bf0246eee53a4c377820d89f10a7fe5a75613cef397bd1baaea2bdb0a4ca7e78" name="gga3bf0246eee53a4c377820d89f10a7fe5a75613cef397bd1baaea2bdb0a4ca7e78"></a>OS_ERR_ISR&#160;</td><td class="fielddoc"><p >错误：在中断中调用了不能用的函数 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00052">52</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gaca35d2cf626b48c8241529eca160858d" name="gaca35d2cf626b48c8241529eca160858d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca35d2cf626b48c8241529eca160858d">&#9670;&#160;</a></span>OS_EnterCritical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_EnterCritical </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>进入临界区 </p>
+<dl class="section note"><dt>注解</dt><dd>关闭全局中断并增加嵌套计数。 </dd></dl>
+
+</div>
+</div>
+<a id="ga9d6d3103d058939a175a2c540b25795e" name="ga9d6d3103d058939a175a2c540b25795e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d6d3103d058939a175a2c540b25795e">&#9670;&#160;</a></span>OS_ExitCritical()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_ExitCritical </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>退出临界区 </p>
+<dl class="section note"><dt>注解</dt><dd>减少嵌套计数，当计数为 0 时恢复全局中断。 </dd></dl>
+
+</div>
+</div>
+<a id="gacb6df8f47f418aad9c9a9e045d7d1e6d" name="gacb6df8f47f418aad9c9a9e045d7d1e6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb6df8f47f418aad9c9a9e045d7d1e6d">&#9670;&#160;</a></span>OS_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 OS 内核 </p>
+<dl class="section note"><dt>注解</dt><dd>必须在 main 函数最开始调用，且在创建任何任务之前。 它会初始化内部数据结构和空闲任务。 </dd></dl>
+
+</div>
+</div>
+<a id="ga2d7ccf977a446a79fbda65bc7df51971" name="ga2d7ccf977a446a79fbda65bc7df51971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d7ccf977a446a79fbda65bc7df51971">&#9670;&#160;</a></span>OS_StartScheduler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_StartScheduler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启调度器 </p>
+<dl class="section note"><dt>注解</dt><dd>此函数不会返回。它会启动 SysTick 并开始执行第一个任务。 </dd></dl>
+
+</div>
+</div>
+<a id="gab47154e395ba5b1506de9fa136daeb0b" name="gab47154e395ba5b1506de9fa136daeb0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab47154e395ba5b1506de9fa136daeb0b">&#9670;&#160;</a></span>OS_Tick_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Tick_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>处理 SysTick 中断的“回调函数” </p>
+<dl class="section note"><dt>注解</dt><dd>需要在 SysTick_Handler 中调用此函数以驱动系统心跳。 </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

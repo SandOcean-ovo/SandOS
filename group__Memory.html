@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: 内存管理</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">内存管理</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structMemBlock.html">MemBlock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存池控制块  <a href="structMemBlock.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structMemBlock.html">MemBlock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a></td></tr>
+<tr class="memdesc:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="mdescLeft">&#160;</td><td class="mdescRight">内存池控制块  <a href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">更多...</a><br /></td></tr>
+<tr class="separator:ga6b79f076e88411a0a9efe75bda7c3e86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaad34fe6316597a79231ea3f65197468b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gaad34fe6316597a79231ea3f65197468b">OS_MemInit</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem, void *start_addr, uint32_t blocks, uint32_t block_size)</td></tr>
+<tr class="memdesc:gaad34fe6316597a79231ea3f65197468b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化固定大小内存池  <a href="group__Memory.html#gaad34fe6316597a79231ea3f65197468b">更多...</a><br /></td></tr>
+<tr class="separator:gaad34fe6316597a79231ea3f65197468b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac934e2698ada3c2ab1338170fd9cad15"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gac934e2698ada3c2ab1338170fd9cad15">OS_MemGet</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem)</td></tr>
+<tr class="memdesc:gac934e2698ada3c2ab1338170fd9cad15"><td class="mdescLeft">&#160;</td><td class="mdescRight">申请内存块  <a href="group__Memory.html#gac934e2698ada3c2ab1338170fd9cad15">更多...</a><br /></td></tr>
+<tr class="separator:gac934e2698ada3c2ab1338170fd9cad15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga0cb58b9e50830e7946e5f9d140b26fb3">OS_MemPut</a> (<a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *p_mem, void *p_block)</td></tr>
+<tr class="memdesc:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">释放内存块  <a href="group__Memory.html#ga0cb58b9e50830e7946e5f9d140b26fb3">更多...</a><br /></td></tr>
+<tr class="separator:ga0cb58b9e50830e7946e5f9d140b26fb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga6b79f076e88411a0a9efe75bda7c3e86" name="ga6b79f076e88411a0a9efe75bda7c3e86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b79f076e88411a0a9efe75bda7c3e86">&#9670;&#160;</a></span>OS_Mem</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structMemBlock.html">MemBlock</a> <a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>内存池控制块 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="gac934e2698ada3c2ab1338170fd9cad15" name="gac934e2698ada3c2ab1338170fd9cad15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac934e2698ada3c2ab1338170fd9cad15">&#9670;&#160;</a></span>OS_MemGet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void * OS_MemGet </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *&#160;</td>
+          <td class="paramname"><em>p_mem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>申请内存块 </p>
+<p >从内存池中获取一个空闲块。如果没有空闲块，任务将阻塞。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mem</td><td>内存池对象指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>void* 指向申请到的内存块地址 </dd></dl>
+
+</div>
+</div>
+<a id="gaad34fe6316597a79231ea3f65197468b" name="gaad34fe6316597a79231ea3f65197468b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad34fe6316597a79231ea3f65197468b">&#9670;&#160;</a></span>OS_MemInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_MemInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *&#160;</td>
+          <td class="paramname"><em>p_mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>start_addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>blocks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>block_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化固定大小内存池 </p>
+<p >将一块连续的内存区域划分为若干个固定大小的块，并使用链表管理。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mem</td><td>内存池对象指针 </td></tr>
+    <tr><td class="paramname">start_addr</td><td>内存池起始地址（需保证4字节对齐） </td></tr>
+    <tr><td class="paramname">blocks</td><td>内存块总数量 </td></tr>
+    <tr><td class="paramname">block_size</td><td>单个内存块大小（字节，需保证4字节对齐且 &gt;= 指针大小） </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0cb58b9e50830e7946e5f9d140b26fb3" name="ga0cb58b9e50830e7946e5f9d140b26fb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0cb58b9e50830e7946e5f9d140b26fb3">&#9670;&#160;</a></span>OS_MemPut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_MemPut </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Memory.html#ga6b79f076e88411a0a9efe75bda7c3e86">OS_Mem</a> *&#160;</td>
+          <td class="paramname"><em>p_mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p_block</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>释放内存块 </p>
+<p >将内存块归还给内存池。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mem</td><td>内存池对象指针 </td></tr>
+    <tr><td class="paramname">p_block</td><td>待释放的内存块地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OS_OK</td><td>成功 </td></tr>
+    <tr><td class="paramname">OS_ERR_INVALID_ADDR</td><td>地址不在该内存池范围内 </td></tr>
+    <tr><td class="paramname">OS_ERR_NOT_ALIGN</td><td>地址未对齐 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: Queue结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structQueue-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Queue结构体 参考<div class="ingroups"><a class="el" href="group__Queue.html">消息队列</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>消息队列结构体定义  
+ <a href="structQueue.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="os__core_8h_source.html">os_core.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a2a81617644c59adfb1b9c8d51af61455"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#a2a81617644c59adfb1b9c8d51af61455">Buffer</a></td></tr>
+<tr class="memdesc:a2a81617644c59adfb1b9c8d51af61455"><td class="mdescLeft">&#160;</td><td class="mdescRight">指向存储数据的首地址  <a href="structQueue.html#a2a81617644c59adfb1b9c8d51af61455">更多...</a><br /></td></tr>
+<tr class="separator:a2a81617644c59adfb1b9c8d51af61455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8800361889d41b8741af737e79bf9d6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#ac8800361889d41b8741af737e79bf9d6">MsgSize</a></td></tr>
+<tr class="memdesc:ac8800361889d41b8741af737e79bf9d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">每条消息的大小（单位字节）  <a href="structQueue.html#ac8800361889d41b8741af737e79bf9d6">更多...</a><br /></td></tr>
+<tr class="separator:ac8800361889d41b8741af737e79bf9d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0551322b698fadc4e0fe4b151048f13"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#ae0551322b698fadc4e0fe4b151048f13">QSize</a></td></tr>
+<tr class="memdesc:ae0551322b698fadc4e0fe4b151048f13"><td class="mdescLeft">&#160;</td><td class="mdescRight">队列大小  <a href="structQueue.html#ae0551322b698fadc4e0fe4b151048f13">更多...</a><br /></td></tr>
+<tr class="separator:ae0551322b698fadc4e0fe4b151048f13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97164de3bd36aa75228db908491163c0"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#a97164de3bd36aa75228db908491163c0">MsgCount</a></td></tr>
+<tr class="memdesc:a97164de3bd36aa75228db908491163c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">当前消息数（用于判断空/满）  <a href="structQueue.html#a97164de3bd36aa75228db908491163c0">更多...</a><br /></td></tr>
+<tr class="separator:a97164de3bd36aa75228db908491163c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49bac544bfbb5b5bcccde3b40fa8fd8f"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#a49bac544bfbb5b5bcccde3b40fa8fd8f">Head</a></td></tr>
+<tr class="memdesc:a49bac544bfbb5b5bcccde3b40fa8fd8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">写指针（实际上是下标）  <a href="structQueue.html#a49bac544bfbb5b5bcccde3b40fa8fd8f">更多...</a><br /></td></tr>
+<tr class="separator:a49bac544bfbb5b5bcccde3b40fa8fd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbaedc07b04b1c7cf31abdb0bef9d05e"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#adbaedc07b04b1c7cf31abdb0bef9d05e">Tail</a></td></tr>
+<tr class="memdesc:adbaedc07b04b1c7cf31abdb0bef9d05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">读指针（实际上是下标）  <a href="structQueue.html#adbaedc07b04b1c7cf31abdb0bef9d05e">更多...</a><br /></td></tr>
+<tr class="separator:adbaedc07b04b1c7cf31abdb0bef9d05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5e8a03051b3781b54c44602e88e74f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html#a3a5e8a03051b3781b54c44602e88e74f">WaitReadList</a></td></tr>
+<tr class="memdesc:a3a5e8a03051b3781b54c44602e88e74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取等待链表  <a href="structQueue.html#a3a5e8a03051b3781b54c44602e88e74f">更多...</a><br /></td></tr>
+<tr class="separator:a3a5e8a03051b3781b54c44602e88e74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >消息队列结构体定义 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00157">157</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a2a81617644c59adfb1b9c8d51af61455" name="a2a81617644c59adfb1b9c8d51af61455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a81617644c59adfb1b9c8d51af61455">&#9670;&#160;</a></span>Buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* Queue::Buffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指向存储数据的首地址 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00159">159</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a49bac544bfbb5b5bcccde3b40fa8fd8f" name="a49bac544bfbb5b5bcccde3b40fa8fd8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49bac544bfbb5b5bcccde3b40fa8fd8f">&#9670;&#160;</a></span>Head</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Queue::Head</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>写指针（实际上是下标） </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00163">163</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a97164de3bd36aa75228db908491163c0" name="a97164de3bd36aa75228db908491163c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97164de3bd36aa75228db908491163c0">&#9670;&#160;</a></span>MsgCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Queue::MsgCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>当前消息数（用于判断空/满） </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00162">162</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac8800361889d41b8741af737e79bf9d6" name="ac8800361889d41b8741af737e79bf9d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8800361889d41b8741af737e79bf9d6">&#9670;&#160;</a></span>MsgSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Queue::MsgSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>每条消息的大小（单位字节） </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00160">160</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae0551322b698fadc4e0fe4b151048f13" name="ae0551322b698fadc4e0fe4b151048f13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0551322b698fadc4e0fe4b151048f13">&#9670;&#160;</a></span>QSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Queue::QSize</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>队列大小 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00161">161</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adbaedc07b04b1c7cf31abdb0bef9d05e" name="adbaedc07b04b1c7cf31abdb0bef9d05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbaedc07b04b1c7cf31abdb0bef9d05e">&#9670;&#160;</a></span>Tail</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t Queue::Tail</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读指针（实际上是下标） </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00164">164</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3a5e8a03051b3781b54c44602e88e74f" name="a3a5e8a03051b3781b54c44602e88e74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5e8a03051b3781b54c44602e88e74f">&#9670;&#160;</a></span>WaitReadList</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#gaa8133d9a9062060fd7208d370a24b6bf">OS_List</a> Queue::WaitReadList</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>读取等待链表 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00166">166</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>/github/workspace/Source/Inc/<a class="el" href="os__core_8h_source.html">os_core.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

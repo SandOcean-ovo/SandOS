@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: 移植接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">移植接口</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:gaa39f2c6de0b61c320d17051f72e54f7c"><td class="memItemLeft" align="right" valign="top">uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#gaa39f2c6de0b61c320d17051f72e54f7c">OS_StackInit</a> (<a class="el" href="os__common_8h.html#a74fc33ca899b04e631a66777fb9262a6">OS_TaskFunc_t</a> task_function, void *task_param, uint32_t *stack_init_address, uint32_t stack_depth)</td></tr>
+<tr class="memdesc:gaa39f2c6de0b61c320d17051f72e54f7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化任务栈  <a href="group__Porting.html#gaa39f2c6de0b61c320d17051f72e54f7c">更多...</a><br /></td></tr>
+<tr class="separator:gaa39f2c6de0b61c320d17051f72e54f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaad31c57a92caa2517f66bfae1dae356b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#gaad31c57a92caa2517f66bfae1dae356b">OS_Init_Timer</a> (void)</td></tr>
+<tr class="memdesc:gaad31c57a92caa2517f66bfae1dae356b"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化 SysTick  <a href="group__Porting.html#gaad31c57a92caa2517f66bfae1dae356b">更多...</a><br /></td></tr>
+<tr class="separator:gaad31c57a92caa2517f66bfae1dae356b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5ca9b83c0abb22f638db13cd8a2c9345"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#ga5ca9b83c0abb22f638db13cd8a2c9345">OS_Tick_Reset</a> (void)</td></tr>
+<tr class="memdesc:ga5ca9b83c0abb22f638db13cd8a2c9345"><td class="mdescLeft">&#160;</td><td class="mdescRight">复位 SysTick  <a href="group__Porting.html#ga5ca9b83c0abb22f638db13cd8a2c9345">更多...</a><br /></td></tr>
+<tr class="separator:ga5ca9b83c0abb22f638db13cd8a2c9345"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga390b3a4a6c3648a510be6c42652b7a38"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#ga390b3a4a6c3648a510be6c42652b7a38">OS_Trigger_SWI</a> (void)</td></tr>
+<tr class="memdesc:ga390b3a4a6c3648a510be6c42652b7a38"><td class="mdescLeft">&#160;</td><td class="mdescRight">触发软件中断 (SWI)  <a href="group__Porting.html#ga390b3a4a6c3648a510be6c42652b7a38">更多...</a><br /></td></tr>
+<tr class="separator:ga390b3a4a6c3648a510be6c42652b7a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf84ed90da235703c3d6049c5c831fc1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#gaf84ed90da235703c3d6049c5c831fc1d">OS_Enable_IRQ</a> (void)</td></tr>
+<tr class="memdesc:gaf84ed90da235703c3d6049c5c831fc1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">开启全局中断  <a href="group__Porting.html#gaf84ed90da235703c3d6049c5c831fc1d">更多...</a><br /></td></tr>
+<tr class="separator:gaf84ed90da235703c3d6049c5c831fc1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3125a3970f197686b5cf7c0f07c06a0d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#ga3125a3970f197686b5cf7c0f07c06a0d">OS_Disable_IRQ</a> (void)</td></tr>
+<tr class="memdesc:ga3125a3970f197686b5cf7c0f07c06a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">关闭全局中断  <a href="group__Porting.html#ga3125a3970f197686b5cf7c0f07c06a0d">更多...</a><br /></td></tr>
+<tr class="separator:ga3125a3970f197686b5cf7c0f07c06a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b23816b2c08042112cc69022103e32d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Porting.html#ga8b23816b2c08042112cc69022103e32d">OS_GetTopPrio</a> (uint32_t PrioMap)</td></tr>
+<tr class="memdesc:ga8b23816b2c08042112cc69022103e32d"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取最高优先级  <a href="group__Porting.html#ga8b23816b2c08042112cc69022103e32d">更多...</a><br /></td></tr>
+<tr class="separator:ga8b23816b2c08042112cc69022103e32d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga3125a3970f197686b5cf7c0f07c06a0d" name="ga3125a3970f197686b5cf7c0f07c06a0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3125a3970f197686b5cf7c0f07c06a0d">&#9670;&#160;</a></span>OS_Disable_IRQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Disable_IRQ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>关闭全局中断 </p>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00083">83</a> 行定义.</p>
+
+</div>
+</div>
+<a id="gaf84ed90da235703c3d6049c5c831fc1d" name="gaf84ed90da235703c3d6049c5c831fc1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf84ed90da235703c3d6049c5c831fc1d">&#9670;&#160;</a></span>OS_Enable_IRQ()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Enable_IRQ </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>开启全局中断 </p>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00078">78</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga8b23816b2c08042112cc69022103e32d" name="ga8b23816b2c08042112cc69022103e32d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b23816b2c08042112cc69022103e32d">&#9670;&#160;</a></span>OS_GetTopPrio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t OS_GetTopPrio </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>PrioMap</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>获取最高优先级 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">PrioMap</td><td>优先级位图 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint8_t 最高优先级的数值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00088">88</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="os__cpu_8c_source.html#l00003">OS_MapTable</a>.</p>
+
+</div>
+</div>
+<a id="gaad31c57a92caa2517f66bfae1dae356b" name="gaad31c57a92caa2517f66bfae1dae356b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaad31c57a92caa2517f66bfae1dae356b">&#9670;&#160;</a></span>OS_Init_Timer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Init_Timer </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化 SysTick </p>
+<p >配置 SysTick 时钟源和重装载值，以产生系统节拍。 </p>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00053">53</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="os__cpu_8c_source.html#l00022">TICKS_PER_MS</a>.</p>
+
+</div>
+</div>
+<a id="gaa39f2c6de0b61c320d17051f72e54f7c" name="gaa39f2c6de0b61c320d17051f72e54f7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa39f2c6de0b61c320d17051f72e54f7c">&#9670;&#160;</a></span>OS_StackInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t * OS_StackInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="os__common_8h.html#a74fc33ca899b04e631a66777fb9262a6">OS_TaskFunc_t</a>&#160;</td>
+          <td class="paramname"><em>task_function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>task_param</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>stack_init_address</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>stack_depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化任务栈 </p>
+<p >根据 RISC-V 架构的调用约定，初始化任务栈帧。 栈帧包含 x1(ra), x5-x31 等寄存器的初始值。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">task_function</td><td>任务入口函数地址 </td></tr>
+    <tr><td class="paramname">task_param</td><td>任务函数的参数 </td></tr>
+    <tr><td class="paramname">stack_init_address</td><td>栈底（高地址）或 栈数组起始地址（取决于具体实现，通常是栈数组名） </td></tr>
+    <tr><td class="paramname">stack_depth</td><td>栈深度（单位：字/元素个数） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>uint32_t* 初始化完成后的栈顶指针 (SP) </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00031">31</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="os__cpu_8h_source.html#l00008">MSTATUS_VALUE</a> , 以及 <a class="el" href="os__cpu_8c_source.html#l00025">OS_TaskReturn()</a>.</p>
+
+</div>
+</div>
+<a id="ga5ca9b83c0abb22f638db13cd8a2c9345" name="ga5ca9b83c0abb22f638db13cd8a2c9345"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ca9b83c0abb22f638db13cd8a2c9345">&#9670;&#160;</a></span>OS_Tick_Reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Tick_Reset </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>复位 SysTick </p>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00067">67</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ga390b3a4a6c3648a510be6c42652b7a38" name="ga390b3a4a6c3648a510be6c42652b7a38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga390b3a4a6c3648a510be6c42652b7a38">&#9670;&#160;</a></span>OS_Trigger_SWI()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_Trigger_SWI </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>触发软件中断 (SWI) </p>
+<p >用于在任务级触发 PendSV 或类似的软件中断以执行上下文切换。 </p>
+
+<p class="definition">在文件 <a class="el" href="os__cpu_8c_source.html">os_cpu.c</a> 第 <a class="el" href="os__cpu_8c_source.html#l00073">73</a> 行定义.</p>
+
+<p class="reference">引用了 <a class="el" href="os__cpu_8h_source.html#l00010">SysTick_CTLR_SWIE</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

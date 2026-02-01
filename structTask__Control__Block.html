@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: Task_Control_Block结构体 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 属性</a> &#124;
+<a href="structTask__Control__Block-members.html">所有成员列表</a>  </div>
+  <div class="headertitle"><div class="title">Task_Control_Block结构体 参考<div class="ingroups"><a class="el" href="group__Task.html">任务管理</a></div></div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>任务控制块结构体定义  
+ <a href="structTask__Control__Block.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="os__core_8h_source.html">os_core.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Public 属性</h2></td></tr>
+<tr class="memitem:a744266e70e55bf1dc84aaf3c3713a8bd"><td class="memItemLeft" align="right" valign="top">volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#a744266e70e55bf1dc84aaf3c3713a8bd">stackPtr</a></td></tr>
+<tr class="memdesc:a744266e70e55bf1dc84aaf3c3713a8bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务对应的栈指针  <a href="structTask__Control__Block.html#a744266e70e55bf1dc84aaf3c3713a8bd">更多...</a><br /></td></tr>
+<tr class="separator:a744266e70e55bf1dc84aaf3c3713a8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3fa522ce64fc7c15632bd8c86f6a3bc"><td class="memItemLeft" align="right" valign="top">volatile uint32_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#ab3fa522ce64fc7c15632bd8c86f6a3bc">stackLimit</a></td></tr>
+<tr class="memdesc:ab3fa522ce64fc7c15632bd8c86f6a3bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">栈底地址，用于栈溢出检测  <a href="structTask__Control__Block.html#ab3fa522ce64fc7c15632bd8c86f6a3bc">更多...</a><br /></td></tr>
+<tr class="separator:ab3fa522ce64fc7c15632bd8c86f6a3bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d12f1f2c54a3b7c8b1bbf58c361ecb7"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structTask__Control__Block.html">Task_Control_Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#a8d12f1f2c54a3b7c8b1bbf58c361ecb7">Prev</a></td></tr>
+<tr class="memdesc:a8d12f1f2c54a3b7c8b1bbf58c361ecb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">指向上一个任务的指针  <a href="structTask__Control__Block.html#a8d12f1f2c54a3b7c8b1bbf58c361ecb7">更多...</a><br /></td></tr>
+<tr class="separator:a8d12f1f2c54a3b7c8b1bbf58c361ecb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02d83d780f611fe3e6ff1cef60420488"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structTask__Control__Block.html">Task_Control_Block</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#a02d83d780f611fe3e6ff1cef60420488">Next</a></td></tr>
+<tr class="memdesc:a02d83d780f611fe3e6ff1cef60420488"><td class="mdescLeft">&#160;</td><td class="mdescRight">指向下一个任务的指针  <a href="structTask__Control__Block.html#a02d83d780f611fe3e6ff1cef60420488">更多...</a><br /></td></tr>
+<tr class="separator:a02d83d780f611fe3e6ff1cef60420488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a741ff5512a04afa634fc018f64c782f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Task.html#gab8f94cd23d1004657ab6e72f6a38dc78">OS_TaskState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#a741ff5512a04afa634fc018f64c782f6">State</a></td></tr>
+<tr class="memdesc:a741ff5512a04afa634fc018f64c782f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务状态  <a href="structTask__Control__Block.html#a741ff5512a04afa634fc018f64c782f6">更多...</a><br /></td></tr>
+<tr class="separator:a741ff5512a04afa634fc018f64c782f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73def346868474e59b7866fa08f9e6a4"><td class="memItemLeft" align="right" valign="top">volatile uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#a73def346868474e59b7866fa08f9e6a4">DelayTicks</a></td></tr>
+<tr class="memdesc:a73def346868474e59b7866fa08f9e6a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">延时的时间（单位ms）  <a href="structTask__Control__Block.html#a73def346868474e59b7866fa08f9e6a4">更多...</a><br /></td></tr>
+<tr class="separator:a73def346868474e59b7866fa08f9e6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3a22a3c4ebf3ff346e9e39d271707e"><td class="memItemLeft" align="right" valign="top">volatile uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#abb3a22a3c4ebf3ff346e9e39d271707e">Priority</a></td></tr>
+<tr class="memdesc:abb3a22a3c4ebf3ff346e9e39d271707e"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务优先级  <a href="structTask__Control__Block.html#abb3a22a3c4ebf3ff346e9e39d271707e">更多...</a><br /></td></tr>
+<tr class="separator:abb3a22a3c4ebf3ff346e9e39d271707e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab11c027719e27b64d906a10cb6028713"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTask__Control__Block.html#ab11c027719e27b64d906a10cb6028713">OriginalPrio</a></td></tr>
+<tr class="memdesc:ab11c027719e27b64d906a10cb6028713"><td class="mdescLeft">&#160;</td><td class="mdescRight">任务原始优先级  <a href="structTask__Control__Block.html#ab11c027719e27b64d906a10cb6028713">更多...</a><br /></td></tr>
+<tr class="separator:ab11c027719e27b64d906a10cb6028713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >任务控制块结构体定义 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00094">94</a> 行定义.</p>
+</div><h2 class="groupheader">类成员变量说明</h2>
+<a id="a73def346868474e59b7866fa08f9e6a4" name="a73def346868474e59b7866fa08f9e6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73def346868474e59b7866fa08f9e6a4">&#9670;&#160;</a></span>DelayTicks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t Task_Control_Block::DelayTicks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>延时的时间（单位ms） </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00101">101</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a02d83d780f611fe3e6ff1cef60420488" name="a02d83d780f611fe3e6ff1cef60420488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02d83d780f611fe3e6ff1cef60420488">&#9670;&#160;</a></span>Next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structTask__Control__Block.html">Task_Control_Block</a>* Task_Control_Block::Next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指向下一个任务的指针 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00099">99</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab11c027719e27b64d906a10cb6028713" name="ab11c027719e27b64d906a10cb6028713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab11c027719e27b64d906a10cb6028713">&#9670;&#160;</a></span>OriginalPrio</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t Task_Control_Block::OriginalPrio</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任务原始优先级 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00103">103</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a8d12f1f2c54a3b7c8b1bbf58c361ecb7" name="a8d12f1f2c54a3b7c8b1bbf58c361ecb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d12f1f2c54a3b7c8b1bbf58c361ecb7">&#9670;&#160;</a></span>Prev</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structTask__Control__Block.html">Task_Control_Block</a>* Task_Control_Block::Prev</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>指向上一个任务的指针 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00098">98</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abb3a22a3c4ebf3ff346e9e39d271707e" name="abb3a22a3c4ebf3ff346e9e39d271707e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3a22a3c4ebf3ff346e9e39d271707e">&#9670;&#160;</a></span>Priority</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint8_t Task_Control_Block::Priority</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任务优先级 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00102">102</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab3fa522ce64fc7c15632bd8c86f6a3bc" name="ab3fa522ce64fc7c15632bd8c86f6a3bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3fa522ce64fc7c15632bd8c86f6a3bc">&#9670;&#160;</a></span>stackLimit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t* Task_Control_Block::stackLimit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>栈底地址，用于栈溢出检测 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00097">97</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a744266e70e55bf1dc84aaf3c3713a8bd" name="a744266e70e55bf1dc84aaf3c3713a8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744266e70e55bf1dc84aaf3c3713a8bd">&#9670;&#160;</a></span>stackPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">volatile uint32_t* Task_Control_Block::stackPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任务对应的栈指针 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00096">96</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a741ff5512a04afa634fc018f64c782f6" name="a741ff5512a04afa634fc018f64c782f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741ff5512a04afa634fc018f64c782f6">&#9670;&#160;</a></span>State</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Task.html#gab8f94cd23d1004657ab6e72f6a38dc78">OS_TaskState</a> Task_Control_Block::State</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>任务状态 </p>
+
+<p class="definition">在文件 <a class="el" href="os__core_8h_source.html">os_core.h</a> 第 <a class="el" href="os__core_8h_source.html#l00100">100</a> 行定义.</p>
+
+</div>
+</div>
+<hr/>该结构体的文档由以下文件生成:<ul>
+<li>/github/workspace/Source/Inc/<a class="el" href="os__core_8h_source.html">os_core.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

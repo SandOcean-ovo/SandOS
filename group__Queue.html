@@ -1,0 +1,376 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>SandOS: 消息队列</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">SandOS<span id="projectnumber">&#160;V1.0</span>
+   </div>
+   <div id="projectbrief">A lightweight real-time operating system for RISC-V (CH32V203)</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#typedef-members">类型定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle"><div class="title">消息队列</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structQueue.html">Queue</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体定义  <a href="structQueue.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+类型定义</h2></td></tr>
+<tr class="memitem:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structQueue.html">Queue</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a></td></tr>
+<tr class="memdesc:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="mdescLeft">&#160;</td><td class="mdescRight">消息队列结构体定义  <a href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">更多...</a><br /></td></tr>
+<tr class="separator:ga6db2ed8e4c1b31df6682ac0f24c7c98e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga0a1f3c0156476f18a58fb45bd23cddd3">OS_QueueInit</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *buffer, uint16_t msg_size, uint16_t queue_size)</td></tr>
+<tr class="memdesc:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化队列  <a href="group__Queue.html#ga0a1f3c0156476f18a58fb45bd23cddd3">更多...</a><br /></td></tr>
+<tr class="separator:ga0a1f3c0156476f18a58fb45bd23cddd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga0ffa7d81d03cb6e202b012fc41769d6b">OS_QueueSend</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg)</td></tr>
+<tr class="memdesc:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送消息（入队）  <a href="group__Queue.html#ga0ffa7d81d03cb6e202b012fc41769d6b">更多...</a><br /></td></tr>
+<tr class="separator:ga0ffa7d81d03cb6e202b012fc41769d6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga7e7ae1663c3618abcf9ffe3413e29a44">OS_QueueReceive</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg_buffer)</td></tr>
+<tr class="memdesc:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收消息（出队）  <a href="group__Queue.html#ga7e7ae1663c3618abcf9ffe3413e29a44">更多...</a><br /></td></tr>
+<tr class="separator:ga7e7ae1663c3618abcf9ffe3413e29a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#ga910a2e18888ff96f6a1e34ea4f0bf606">OS_QueueSendFromISR</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg, uint8_t *pxHigherPrioTaskWoken)</td></tr>
+<tr class="memdesc:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="mdescLeft">&#160;</td><td class="mdescRight">在中断中发送消息（入队）  <a href="group__Queue.html#ga910a2e18888ff96f6a1e34ea4f0bf606">更多...</a><br /></td></tr>
+<tr class="separator:ga910a2e18888ff96f6a1e34ea4f0bf606"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabdfebee8af64e6d5c193e52f804b6253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Queue.html#gabdfebee8af64e6d5c193e52f804b6253">OS_QueueReceiveFromISR</a> (<a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *p_queue, void *p_msg_buffer, uint8_t *pxHigherPrioTaskWoken)</td></tr>
+<tr class="memdesc:gabdfebee8af64e6d5c193e52f804b6253"><td class="mdescLeft">&#160;</td><td class="mdescRight">在中断中接收消息（出队）  <a href="group__Queue.html#gabdfebee8af64e6d5c193e52f804b6253">更多...</a><br /></td></tr>
+<tr class="separator:gabdfebee8af64e6d5c193e52f804b6253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<h2 class="groupheader">类型定义说明</h2>
+<a id="ga6db2ed8e4c1b31df6682ac0f24c7c98e" name="ga6db2ed8e4c1b31df6682ac0f24c7c98e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6db2ed8e4c1b31df6682ac0f24c7c98e">&#9670;&#160;</a></span>OS_Queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="structQueue.html">Queue</a> <a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>消息队列结构体定义 </p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="ga0a1f3c0156476f18a58fb45bd23cddd3" name="ga0a1f3c0156476f18a58fb45bd23cddd3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a1f3c0156476f18a58fb45bd23cddd3">&#9670;&#160;</a></span>OS_QueueInit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OS_QueueInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *&#160;</td>
+          <td class="paramname"><em>p_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>msg_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>queue_size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化队列 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_queue</td><td>队列控制块指针 </td></tr>
+    <tr><td class="paramname">buffer</td><td>实际存储区指针 (由用户分配的数组) </td></tr>
+    <tr><td class="paramname">msg_size</td><td>每个消息的大小 (字节) </td></tr>
+    <tr><td class="paramname">queue_size</td><td>队列深度 (最大能容纳的消息个数) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga7e7ae1663c3618abcf9ffe3413e29a44" name="ga7e7ae1663c3618abcf9ffe3413e29a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e7ae1663c3618abcf9ffe3413e29a44">&#9670;&#160;</a></span>OS_QueueReceive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_QueueReceive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *&#160;</td>
+          <td class="paramname"><em>p_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p_msg_buffer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收消息（出队） </p>
+<p >如果队列为空，任务将阻塞直到有消息到达。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_queue</td><td>队列控制块指针 </td></tr>
+    <tr><td class="paramname">p_msg_buffer</td><td>用于接收消息的缓冲区指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status OS_OK 表示成功 </dd></dl>
+
+</div>
+</div>
+<a id="gabdfebee8af64e6d5c193e52f804b6253" name="gabdfebee8af64e6d5c193e52f804b6253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabdfebee8af64e6d5c193e52f804b6253">&#9670;&#160;</a></span>OS_QueueReceiveFromISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_QueueReceiveFromISR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *&#160;</td>
+          <td class="paramname"><em>p_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p_msg_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pxHigherPrioTaskWoken</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在中断中接收消息（出队） </p>
+<p >中断安全版本，不会阻塞。如果队列为空则立即返回错误。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_queue</td><td>队列控制块指针 </td></tr>
+    <tr><td class="paramname">p_msg_buffer</td><td>用于接收消息的缓冲区指针 </td></tr>
+    <tr><td class="paramname">pxHigherPrioTaskWoken</td><td>输出参数（预留，当前未使用） </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OS_OK</td><td>接收成功 </td></tr>
+    <tr><td class="paramname">OS_ERR_RESOURCE</td><td>队列为空 </td></tr>
+    <tr><td class="paramname">OS_ERR_PARAM</td><td>参数无效 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga0ffa7d81d03cb6e202b012fc41769d6b" name="ga0ffa7d81d03cb6e202b012fc41769d6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ffa7d81d03cb6e202b012fc41769d6b">&#9670;&#160;</a></span>OS_QueueSend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_QueueSend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *&#160;</td>
+          <td class="paramname"><em>p_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p_msg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送消息（入队） </p>
+<p >将数据拷贝到队列缓冲区。如果队列满，则返回错误。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_queue</td><td>队列控制块指针 </td></tr>
+    <tr><td class="paramname">p_msg</td><td>要发送的消息数据的指针 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OS_OK</td><td>发送成功 </td></tr>
+    <tr><td class="paramname">OS_ERR_Q_FULL</td><td>队列已满 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga910a2e18888ff96f6a1e34ea4f0bf606" name="ga910a2e18888ff96f6a1e34ea4f0bf606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga910a2e18888ff96f6a1e34ea4f0bf606">&#9670;&#160;</a></span>OS_QueueSendFromISR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__Core.html#ga3bf0246eee53a4c377820d89f10a7fe5">OS_Status</a> OS_QueueSendFromISR </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__Queue.html#ga6db2ed8e4c1b31df6682ac0f24c7c98e">OS_Queue</a> *&#160;</td>
+          <td class="paramname"><em>p_queue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>p_msg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>pxHigherPrioTaskWoken</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>在中断中发送消息（入队） </p>
+<p >中断安全版本，不会阻塞。 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_queue</td><td>队列控制块指针 </td></tr>
+    <tr><td class="paramname">p_msg</td><td>要发送的消息数据的指针 </td></tr>
+    <tr><td class="paramname">pxHigherPrioTaskWoken</td><td>输出参数，如果唤醒了更高优先级任务则置为 TRUE </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>OS_Status </dd></dl>
+<dl class="retval"><dt>返回值</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">OS_OK</td><td>发送成功 </td></tr>
+    <tr><td class="paramname">OS_ERR_Q_FULL</td><td>队列已满 </td></tr>
+    <tr><td class="paramname">OS_ERR_PARAM</td><td>参数无效 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

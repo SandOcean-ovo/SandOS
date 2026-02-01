@@ -6,7 +6,7 @@ on:
       - main  # 或者 master，根据你的主分支名称修改
     paths:
       - 'Source/**'     # 监听源码变动
-      - 'docs/Doxyfile' # 监听配置变动
+      - 'docs/Doxyfile' 
 
 jobs:
   deploy:

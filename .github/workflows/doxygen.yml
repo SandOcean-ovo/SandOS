@@ -21,7 +21,6 @@ jobs:
       - name: Generate Documentation
         uses: mattnotmitt/doxygen-action@v1.9.5
         with:
-          # 指向你的 Doxyfile 所在路径
           doxyfile-path: 'Doxyfile'
           # 设置工作目录，这样 Doxyfile 中的相对路径 (../Source) 才能正确解析
           working-directory: './docs'

@@ -1,0 +1,88 @@
+# Doxygen configuration file
+
+# Project related configuration
+PROJECT_NAME           = "SandOS"
+PROJECT_NUMBER         = "V1.0"
+PROJECT_BRIEF          = "A lightweight real-time operating system for RISC-V (CH32V203)"
+OUTPUT_DIRECTORY       = .
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = Chinese
+
+# Build related configuration
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+Recursive              = YES
+INPUT                  = ../Source/Inc ../Source/Portable
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
+EXCLUDE                = 
+
+# HTML related configuration
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+HTML_HEADER            = 
+HTML_FOOTER            = 
+HTML_STYLESHEET        = 
+HTML_EXTRA_STYLESHEET  = 
+HTML_EXTRA_FILES       = 
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80
+HTML_TIMESTAMP         = NO
+HTML_DYNAMIC_SECTIONS  = YES
+HTML_INDEX_NUM_ENTRIES = 100
+
+# Latex related configuration
+GENERATE_LATEX         = NO
+
+# Preprocessor related configuration
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+SEARCH_INCLUDES        = YES
+INCLUDE_PATH           = Inc Portable Portable/RISC-V\ QingkeV4
+INCLUDE_FILE_PATTERNS  = 
+PREDEFINED             = 
+SKIP_FUNCTION_MACROS   = YES
+
+# Source browsing related configuration
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = NO
+STRIP_CODE_COMMENTS    = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+REFERENCES_LINK_SOURCE = YES
+USE_HTAGS              = NO
+VERBATIM_HEADERS       = YES
+
+# Diagram related configuration
+HAVE_DOT               = NO
+CLASS_GRAPH            = YES
+COLLABORATION_GRAPH    = YES
+GROUP_GRAPHS           = YES
+UML_LOOK               = NO
+UML_LIMIT_NUM_FIELDS   = 10
+TEMPLATE_RELATIONS     = NO
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = NO
+CALLER_GRAPH           = NO
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+DOT_IMAGE_FORMAT       = png
+INTERACTIVE_SVG        = NO
+DOT_PATH               = 
+DOTFILE_DIRS           = 
+MSCFILE_DIRS           = 
+DIAFILE_DIRS           = 
+PLANTUML_JAR_PATH      = 
+PLANTUML_CFG_FILE      = 
+PLANTUML_INCLUDE_PATH  = 
+DOT_GRAPH_MAX_NODES    = 50
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_TRANSPARENT        = NO
+DOT_MULTI_TARGETS      = NO
+GENERATE_LEGEND        = YES
+DOT_CLEANUP            = YES
